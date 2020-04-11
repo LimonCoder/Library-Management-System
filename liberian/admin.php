@@ -68,7 +68,7 @@ require_once('include/header.php') ?>
             <div class="modal-content">
                 <div class="modal-header">
                     <h3 class="modal-title" id="exampleModalLabel">Add User</h3>
-                    
+
                 </div>
                 <div class="modal-body">
                     <form>
@@ -98,6 +98,7 @@ require_once('include/header.php') ?>
                     </form>
                 </div>
                 <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
             </div>
