@@ -3,7 +3,7 @@ How to run Library-Management-System Project
 
 1. Download the the zip file
 
-2. Extract the file and copy newsportal folder
+2. Extract the file and copy lms folder
 
 3.Paste inside root directory(for xampp xamp/htdocs, for wampp/www,fpr lamp var/www/html)
 
@@ -11,7 +11,7 @@ How to run Library-Management-System Project
 
 5. Import lms.sql  file(given inside the zip package in sql file folder)
 
-6.run the script http://localhost/foldername/
+6.run the script http://localhost/lms/
 
 
 credential for admin panel :
