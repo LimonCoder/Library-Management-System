@@ -4,7 +4,7 @@ require_once('include/header.php') ?>
 <div class="row">
 	<!-----------------------------------------WIDGETBOX Main Box--------------------->
 	<div class="col-sm-12">
-		<h4 class="section-subtitle"><b>Book List :</b></h4>
+		<h4 class="section-subtitle"><b>Library Admins -</b></h4>
 		<div class="row text-right" style="margin-right: 6px">
 			<button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" ><i class="fa fa-plus" style="margin-right: 5px" ></i>Add Admin</button>
 		</div>
@@ -19,7 +19,6 @@ require_once('include/header.php') ?>
 								<th>Name : </th>
 								<th>Email :</th>
 								<th>Username</th>
-								<th>Password</th>
 								<th>Number</th>
 								<th>Address</th>
 								<th>Action</th>
@@ -39,12 +38,11 @@ require_once('include/header.php') ?>
 								<td><?= $row['Name'] ?></td>
 								<td><?= $row['Email'] ?></td>
 								<td><?= $row['Username'] ?></td>
-								<td><?= $row['Password'] ?></td>
 								<td><?= $row['Number'] ?></td>
 								<td><?= $row['Address'] ?></td>
 								<td>
-									<a href="editprofile.php" class="btn btn-primary"><i class="fa fa-pencil"></i></a>
-									<button class="btn btn-danger" style="margin-top: -10px;"><i class="fa fa-trash-o"></i></button>
+									<a href="editprofile.php" class="btn btn-primary  <?=($_SESSION['UserName'] != $row['Username'])?"disabled":""?>" ><i class="fa fa-pencil"></i></a>
+									<button class="btn btn-danger <?=($_SESSION['UserName'] != $row['Username'])?"disabled":""?>" style="margin-top: -10px;"><i class="fa fa-trash-o"></i></button>
 
 								</td>
 							</tr>
@@ -66,7 +64,7 @@ require_once('include/header.php') ?>
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
-			<div class="modal-header " style="background-color: #b3b2b2">
+			<div class="modal-header " style="background-color: rgba(64,242,55,0.06)">
                 <h3 class="modal-title" id="exampleModalLabel" style="float: left">Add User</h3>
                 <button type="button" class="close" id="times" data-dismiss="modal">&times;</button>
 			</div>
@@ -102,8 +100,8 @@ require_once('include/header.php') ?>
 					</div>
 				</form>
 			</div>
-			<div class="modal-footer" style="background-color: #b3b2b2">
-				<button type="button" class="btn btn-secondary" id="closeid" data-dismiss="modal">Close</button>
+			<div class="modal-footer" >
+				<button type="button" class="btn btn-danger" id="closeid" data-dismiss="modal">Close</button>
 
 			</div>
 		</div>
@@ -261,11 +259,24 @@ require_once('include/header.php') ?>
 						nam:name,
 						uemail:email,
 						username: username,
-						pass: password,
 						cpass : cpassword
 					},
 					success:function (res) {
-						console.log(res);
+						if (res == 1){
+                            Swal.fire({
+                                position: 'center',
+                                icon: 'success',
+                                title: 'Libirian Admin save successfully',
+                                showConfirmButton: false,
+                                timer: 1500
+                            })
+
+                           setTimeout(function () {
+                                window.open("admin.php","_self");
+                           },1700);
+
+
+                        }
 
 					}
 				});
