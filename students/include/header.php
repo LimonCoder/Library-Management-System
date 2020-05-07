@@ -43,6 +43,7 @@
     <!--Magnific popup-->
     <link rel="stylesheet" href="../assets/vendor/magnific-popup/magnific-popup.css">
     <!--TEMPLATE css-->
+    <link rel="stylesheet" href="../assets/vendor/data-table/media/css/dataTables.bootstrap.min.css">
     <!-- ========================================================= -->
     <link rel="stylesheet" href="../assets/stylesheets/css/style.css">
 
@@ -160,7 +161,9 @@
                         <ul class="nav nav-left-lines" id="main-nav">
                             <!--HOME-->
                             <li class="<?=($activpage == 'index.php')?'active-item':''?>"><a href="index.php"><i class="fa fa-home" aria-hidden="true"></i><span>Dashboard</span></a></li>
-                            <li class="<?=($activpage == 'Test.php')?'active-item':''?>"><a href="Test.php"><i class="fa fa-home" aria-hidden="true"></i><span>Test</span></a></li>
+                            <li class="<?=($activpage == 'all-records.php')?'active-item':''?>"><a href="all-records.php"><i class="fa fa-book" aria-hidden="true"></i><span>All Records </span></a></li>
+                            <li class="<?=($activpage == 'profile.php')?'active-item':''?>"><a href="profile.php"><i class="fa fa-user" aria-hidden="true"></i><span>Profile</span></a></li>
+                            <li class="<?=($activpage == 'change-password.php')?'active-item':''?>"><a href="change-password.php"><i class="fa fa-unlock" aria-hidden="true"></i><span>Change Password</span></a></li>
 
 
 

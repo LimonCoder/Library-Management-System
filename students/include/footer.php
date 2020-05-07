@@ -28,6 +28,11 @@
 <!-- SECTION script ../assets/and examples-->
 <!-- ========================================================= -->
 <!--Notification msj-->
+<!--dataTable-->
+<script src="../assets/vendor/data-table/media/js/jquery.dataTables.min.js"></script>
+<script src="../assets/vendor/data-table/media/js/dataTables.bootstrap.min.js"></script>
+<!--Examples-->
+<script src="../assets/javascripts/examples/tables/data-tables.js"></script>
 
 <!--morris chart-->
 <script src="../assets/vendor/chart-js/chart.min.js"></script>

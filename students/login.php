@@ -134,6 +134,7 @@ if (isset($_POST['Submit'])){
         $row = mysqli_fetch_assoc($results);
         $useremail = $row['email'];
         $username = $row['username'];
+        $id = $row['id'];
 
         $query2 = "SELECT students.password FROM students WHERE email = '$useremail' OR username = '$username' ";
         $result2 = mysqli_query($con,$query1);
@@ -147,6 +148,7 @@ if (isset($_POST['Submit'])){
 
             if ( $row['status'] == 1){
                     $_SESSION['username'] =  $username ;
+                    $_SESSION['userid'] =$id;
                 ?>
                 <script type="text/javascript">
                     $(document).ready(function () {
