@@ -48,7 +48,7 @@ $id = $_SESSION['userid'];
                         $resutls = mysqli_query($con, $query);
 
                         if (mysqli_num_rows($resutls) > 0){
-                        while ($row = mysqli_fetch_assoc($resutls)) { ?>
+                            $row = mysqli_fetch_assoc($resutls)  ?>
                             <tr>
                                 <td><?= $sl++; ?></td>
                                 <td><?= $row['book_name'] ?></td>
@@ -57,7 +57,7 @@ $id = $_SESSION['userid'];
                                 <td><?= $row['book_publicationname'] ?></td>
                                 <td><?= $row['issue_date'] ?></td>
                             </tr>
-                        <?php }
+                        <?php
                         }else{  ?>
                            <tr>
                                <td colspan="6" align="center" style="color: red">No Record Found</td>
