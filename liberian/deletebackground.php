@@ -11,6 +11,15 @@ if (isset($_POST['deleteid']))
 {
 	$id = $_POST['deleteid'];
 
+	$bookimg =mysqli_query($con,"SELECT books.book_image FROM books WHERE id = $id");
+
+	$images = mysqli_fetch_array($bookimg);
+
+
+	if(file_exists("../serverimages/".$images['book_image'])) {
+		unlink("../serverimages/".$images['book_image']);
+	}
+
 	$success = mysqli_query($con,"DELETE FROM books WHERE id= $id");
 
 	if ($success){
