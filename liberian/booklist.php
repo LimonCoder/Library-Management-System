@@ -36,7 +36,7 @@
                                             <a href="" class="btn btn-primary" data-toggle="modal" data-target="#list-<?= $row['id'] ?>">
                                             <i class="fa fa-eye"></i>
                                             </a>
-                                           <a href="updatebook.php?updateid=<?= base64_encode($row['id']) ?>" class="btn btn-info"><i class="fa fa-pencil"></i></a>
+                                           <a href="updatebook.php?updateid=<?= base64_encode($row['id']) ?>" class="btn btn-info" <?=($row['book_qty'] != $row['avaible_qty'])? 'disabled':'' ?>><i class="fa fa-pencil"></i></a>
 
                                                     <button  class="delid btn btn-danger" style="margin-top: -10px;" id="<?= $row['id']?>" <?=($row['book_qty'] != $row['avaible_qty'])? 'disabled':'' ?> ><i class="fa fa-trash-o"></i></button>
 
