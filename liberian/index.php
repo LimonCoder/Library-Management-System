@@ -149,5 +149,54 @@
 
                         </div>
                     </div>
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Students Summery
+                            </div>
+                            <div class="panel-body">
+                                <canvas id="myChart" width="400" height="400"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                </div>
+
 
 <?php require_once('include/footer.php') ?>
+
+<script>
+    var ctx = document.getElementById('myChart');
+    var myChart = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: ['Active', 'Inactive'],
+            datasets: [{
+                label: '# of Votes',
+                data: [<?php echo $activeusers['active']; ?>, <?php echo $inactiveusers['ainctive']; ?>],
+                backgroundColor: [
+                    'rgb(136, 240, 119)',
+                    'rgb(206, 24, 28)'
+
+
+                ],
+                borderColor: [
+                    'rgb(76, 243, 212)',
+                    'rgba(54, 162, 235, 1)'
+
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        }
+    });
+</script>
