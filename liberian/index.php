@@ -16,7 +16,7 @@
                                             </div>
                                             <div class="col-xs-8">
                                                 <h4 class="subtitle ">Total Student</h4>
-                                                <h1 class="title "><?=$row['count']?></h1>
+                                               <h1 class="counter title" style="display: inline-block; width: 32%"><?=$row['count']?></h1>
                                             </div>
                                         </div>
                                     </div>
@@ -40,7 +40,7 @@
                                                 $admin = mysqli_fetch_assoc($adminresults);
                                                 ?>
                                                 <h4 class="subtitle ">Admin </h4>
-                                                <h1 class="title "><?=$admin['admin']?></h1>
+                                                <h1 class="counter title" style="display: inline-block; width: 32%"><?=$admin['admin']?></h1>
                                             </div>
                                         </div>
                                     </div>
@@ -63,7 +63,7 @@
                                                     $activeusers = mysqli_fetch_assoc($results);
                                                 ?>
                                                 <h4 class="subtitle ">Active Student</h4>
-                                                <h1 class="title "><?=$activeusers['active']?></h1>
+                                                <h1 class="counter title" style="display: inline-block; width: 32%"><?=$activeusers['active']?></h1>
                                             </div>
                                         </div>
                                     </div>
@@ -86,7 +86,7 @@
                                                 $inactiveusers = mysqli_fetch_assoc($inresults);
                                                 ?>
                                                 <h4 class="subtitle">Inactive Student</h4>
-                                                <h1 class="title "><?=$inactiveusers['ainctive']?></h1>
+                                                 <h1 class="counter title" style="display: inline-block; width: 32%"><?=$inactiveusers['ainctive']?></h1>
                                             </div>
                                         </div>
                                     </div>
@@ -117,7 +117,7 @@
                                                 $totalbook = mysqli_fetch_assoc($inresults);
                                                 ?>
                                                 <h4 class="subtitle">Total Books</h4>
-                                                <h1 class="title "><?=$totalbook['totalbooks']?></h1>
+                                                <h1 class="counter title" style="display: inline-block; width: 32%"><?=$totalbook['totalbooks']?></h1>
                                             </div>
                                         </div>
                                     </div>
@@ -140,7 +140,7 @@
                                                 $avaiblebookstore = mysqli_fetch_assoc($inresults);
                                                 ?>
                                                 <h4 class="subtitle">Books Avaible</h4>
-                                                <h1 class="title "><?=$avaiblebookstore['totalavaiblebook']?></h1>
+                                                <h1 class="counter title" style="display: inline-block; width: 32%"><?=$avaiblebookstore['totalavaiblebook']?></h1>
                                             </div>
                                         </div>
                                     </div>
@@ -162,7 +162,6 @@
                     
 
                 </div>
-
 
 <?php require_once('include/footer.php') ?>
 

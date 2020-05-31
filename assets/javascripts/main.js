@@ -47,7 +47,7 @@ $(document).ready(function () {
 
 
 // Issue Book Button Validation ....................
-document.getElementById("isssussave").disabled = true;
+ document.getElementById("isssussave").disabled = true;
 $(document).ready(function(){
 
     $("#bookid").click(function(){
